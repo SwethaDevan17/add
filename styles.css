@@ -1,0 +1,298 @@
+:root {
+  --bg: #f3f9ff;
+  --surface: #ffffff;
+  --surface-soft: #edf9f0;
+  --primary: #2f7db6;
+  --secondary: #55a77d;
+  --text: #15304a;
+  --muted: #4f6678;
+  --radius: 16px;
+  --shadow: 0 8px 30px rgba(21, 48, 74, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #dce9f5;
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.brand {
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: #e8f2fb;
+  color: var(--primary);
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.page-banner {
+  padding-bottom: 24px;
+}
+
+.hero {
+  padding-top: 96px;
+  background: linear-gradient(180deg, #e8f4ff 0%, #f3f9ff 100%);
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #dff1ff;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-top: 18px;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.hero-actions {
+  margin-top: 26px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #d9efdf;
+  color: #1f5f42;
+}
+
+.split-grid,
+.card-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.split-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+}
+
+.card-icon {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.soft-bg {
+  background: linear-gradient(180deg, #f3f9ff 0%, #eef9f1 100%);
+}
+
+.accent {
+  background: var(--surface-soft);
+  border: 1px solid #d5ebdc;
+}
+
+.section-title {
+  margin-bottom: 24px;
+}
+
+.home-visit-note {
+  margin-top: 22px;
+  font-weight: 600;
+  color: #1f5f42;
+}
+
+.form-wrap {
+  max-width: 700px;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.form label,
+.form legend {
+  font-weight: 600;
+  color: var(--text);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cfe0ee;
+  font: inherit;
+}
+
+fieldset {
+  border: 1px solid #cfe0ee;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 16px;
+  margin-top: 8px;
+}
+
+.inline input {
+  width: auto;
+  margin: 0;
+}
+
+.form-message {
+  color: #1f5f42;
+  font-weight: 600;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.site-footer {
+  border-top: 1px solid #dce9f5;
+  background: #f8fcff;
+  padding: 20px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .split-grid,
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .split-grid,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

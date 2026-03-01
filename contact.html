@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | HealthSpan Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div data-component="header"></div>
+
+    <main>
+      <section class="section page-banner fade-in">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <p>We're here to support your family with trusted elder care.</p>
+        </div>
+      </section>
+
+      <section class="section fade-in">
+        <div class="container split-grid">
+          <article class="card">
+            <h2>Reach HealthSpan Care</h2>
+            <ul class="contact-list">
+              <li><strong>Phone:</strong> +1 (555) 240-9090</li>
+              <li><strong>Email:</strong> care@healthspancare.com</li>
+              <li><strong>Location:</strong> 212 Wellness Avenue, Riverside</li>
+            </ul>
+          </article>
+
+          <form class="form card" id="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-message" id="contact-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div data-component="footer"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
